@@ -2,7 +2,7 @@
   "name": "Aviva-Angular2-Starter",
   "version": "0.0.1",
   "scripts": {
-    "start": "node server.js",
+    "start": "node serverS.js",
     "build": "webpack --progress",
     "build-theme": "cross-env NODE_ENV=production webpack --config ./webpack.production-theme.config.js --progress --profile --colors",
     "build:prod": "cross-env APP_ENVIRONMENT=production webpack -p --progress",
