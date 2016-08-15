@@ -28,14 +28,14 @@ if (isDeveloping) {
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));
 
-  app.get('*', function response(req, res) {
+  app.get('/', function response(req, res) {
     res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
     res.end();
   });
 
   app.get('/api/test', function(req, res) {
-     //res.send('this is a express router test');
-     res.sendFile(path.join(__dirname, '../public/index.html'));
+     res.send('this is a express router test');
+    //  res.sendFile(path.join(__dirname, 'public/index.html'));
   });
 
 
