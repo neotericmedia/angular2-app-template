@@ -33,6 +33,14 @@ if (isDeveloping) {
     res.end();
   });
 
+  app.get('/api/test', function(req, res) {
+     //res.send('this is a express router test');
+     res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
+
+
+
+
 } else {
 
   app.use(express.static(__dirname + '/dist'));
@@ -41,6 +49,9 @@ if (isDeveloping) {
   });
 
 }
+
+
+
 
 
 //create express server on port 3000
